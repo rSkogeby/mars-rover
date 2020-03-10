@@ -60,7 +60,14 @@ class DeployRovers:
         elif rover.d == 'W':
             rover.x = rover.x - 1
 
+def stringify_rovers(rovers):
+    rover_list = []
+    while (len(rovers) > 0):
+        rover = rovers.pop(0)
+        rover_list.append(f'{rover.x} {rover.y} {rover.d}')
+    return rover_list
 
 def run_rover_mission(Input):
     deployed_rovers = DeployRovers(Input)
     deployed_rovers.roam()
+    return stringify_rovers(deployed_rovers.rovers)
