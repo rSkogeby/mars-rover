@@ -1,1 +1,1 @@
-from views.live_rover_map import app
+from views import app
