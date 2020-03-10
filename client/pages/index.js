@@ -31,12 +31,12 @@ export default function Index () {
   const [outputText, setOutputText] = useState('')
 
   const setServerInput = async (text) => {
-    //const response = await api.post('/api/input', {
-    //  Input: text
-    //})
-    //const responseText = await response.data.response
-    //setOutputText(responseText)
-    //console.log(responseText)
+    const response = await api.post('/api/input', {
+      Input: text
+    })
+    const responseText = await response.data.response
+    setOutputText(responseText)
+    console.log(responseText)
   }
 
   const onTextFieldChange = async (e) => {
