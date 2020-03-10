@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Grid,
   styled,
+  Typography,
 } from '@material-ui/core'
 
 const StyledGrid = styled(Grid)({
@@ -15,6 +16,10 @@ const ListGrid = styled(StyledGrid)({
   }
 })
 
+const Paragraph = styled(Typography)({
+  'white-space': 'pre-wrap'
+})
+
 export default function Index () {
   return (
     <>
@@ -24,10 +29,14 @@ export default function Index () {
         </StyledGrid>
         <Grid container xs={12} lg={6}>
           <ListGrid item xs={6} lg={3}>
-            <h1>Input</h1>
+            <Paragraph>
+              <h1>Input</h1>
+            </Paragraph>
           </ListGrid>
           <ListGrid item xs={6} lg={3}>
-            <h1>Output</h1>
+            <Paragraph>
+              <h1>Output</h1>
+            </Paragraph>
           </ListGrid>
         </Grid>
       </Grid>
