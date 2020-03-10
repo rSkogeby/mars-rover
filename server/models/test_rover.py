@@ -30,6 +30,27 @@ class TestRover(unittest.TestCase):
         self.deploy_rover._turn_right(self.rover)
         self.assertEqual(self.rover.d, 'N')
 
+    def test_waddle_on(self):
+        self.rover.d = 'N'
+        self.deploy_rover._waddle_on(self.rover)
+        self.assertEqual(self.rover.d, 'N')
+        self.assertEqual(self.rover.y, 1)
+        self.assertEqual(self.rover.x, 0)
+        self.deploy_rover._waddle_on(self.rover)
+        self.assertEqual(self.rover.d, 'N')
+        self.assertEqual(self.rover.y, 2)
+        self.assertEqual(self.rover.x, 0)
+        self.deploy_rover._waddle_on(self.rover)
+        self.assertEqual(self.rover.d, 'N')
+        self.assertEqual(self.rover.y, 3)
+        self.assertEqual(self.rover.x, 0)
+        self.rover.d = 'E'
+        self.deploy_rover._waddle_on(self.rover)
+        self.assertEqual(self.rover.d, 'E')
+        self.assertEqual(self.rover.y, 3)
+        self.assertEqual(self.rover.x, 1)
+
+
 
 
 if __name__ == "__main__":
