@@ -1,0 +1,5 @@
+*pycache*
+*DS_*
+*node_modules*
+.next
+venv
