@@ -21,6 +21,9 @@ const Paragraph = styled(Typography)({
 })
 
 export default function Index () {
+  const [inputText, setInputText] = useState('')
+  const [outputText, setOutputText] = useState('')
+
   return (
     <>
       <Grid container>
@@ -31,11 +34,13 @@ export default function Index () {
           <ListGrid item xs={6} lg={3}>
             <Paragraph>
               <h1>Input</h1>
+              {inputText}
             </Paragraph>
           </ListGrid>
           <ListGrid item xs={6} lg={3}>
             <Paragraph>
               <h1>Output</h1>
+              {outputText}
             </Paragraph>
           </ListGrid>
         </Grid>
