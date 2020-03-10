@@ -40,4 +40,4 @@ With Docker installed on your computer. From the root repository folder:
 ```
 Wait a bit for the development server to start.abs
 
-The app should now be served on port 3000:  [0.0.0.0:3000](http://0.0.0.0:3000)
+The app should now be served on port 3000:  [0.0.0.0:3000](http://0.0.0.0:3000/index)

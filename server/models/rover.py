@@ -5,11 +5,35 @@ class Rover:
     y = 0
     d = ''
 
+def verify_input(Input):
+    Map = re.findall("(\d+\s+\d+)\n",Input)
+    Start = re.findall("(\d+\s+\d+\s+[NSEW])\W+[LRM]+", Input)
+    Instructions = re.findall("\d+\s+\d+\s+[NSEW]\W+([LRM]+)", Input)
+
+    if len(Map) == 1:
+        pass
+    else:
+        return 0
+
+    if len(Start) > 0:
+        pass
+    else:
+        return 0
+
+    if len(Instructions) > 0:
+        pass
+    else:
+        return 0
+
+    return 1
+
+
+
 class DeployRovers:
     rovers = []
 
     def __init__(self, Input):
-        self.map = re.findall("(\d+\s+\d+)\s+\W",Input)
+        self.map = re.findall("(\d+\s+\d+)\n",Input)
         self.start = re.findall("(\d+\s+\d+\s+[NSEW])\W+[LRM]+", Input)
         self.instructions = re.findall("\d+\s+\d+\s+[NSEW]\W+([LRM]+)", Input)
 

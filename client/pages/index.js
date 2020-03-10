@@ -9,22 +9,27 @@ import {
   FormControl,
   InputLabel,
   OutlinedInput
+
 } from '@material-ui/core'
+import api from './client'
+import getConfig from 'next/config'
 
 const StyledGrid = styled(Grid)({
-  textAlign: 'center'
+  textAlign: 'center',
 })
 
 const ListGrid = styled(StyledGrid)({
   background: '#aaaaaa',
   '&:hover': {
-    background: '#ed1212'
+    background: '#ed1212',
   }
 })
 
-const Paragraph = styled(Typography)({
+
+const FormattedP = styled(Typography)({
   'white-space': 'pre-wrap'
 })
+
 
 export default function Index () {
   const [inputText, setInputText] = useState('')
@@ -62,16 +67,16 @@ export default function Index () {
         </StyledGrid>
         <Grid container xs={12} lg={6}>
           <ListGrid item xs={6} lg={3}>
-            <Paragraph>
+            <FormattedP>
               <h1>Input</h1>
               {inputText}
-            </Paragraph>
+            </FormattedP>
           </ListGrid>
           <ListGrid item xs={6} lg={3}>
-            <Paragraph>
+            <FormattedP>
               <h1>Output</h1>
               {outputText}
-            </Paragraph>
+            </FormattedP>
           </ListGrid>
         </Grid>
       </Grid>
