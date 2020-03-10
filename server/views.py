@@ -24,7 +24,6 @@ class Item(BaseModel):
 
 @app.post('/api/input')
 def hello(item: Item):
-    print(item.Input)
     if verify_input(item.Input) == 1:
         rover_list = run_rover_mission(item.Input)
         return {'response': '\n'.join(rover_list)}
