@@ -53,7 +53,7 @@ export default function Index () {
   return (
     <>
       <Grid container>
-        <StyledGrid item xs={12} lg={6}>
+        <StyledGrid xs={12} lg={6}>
           <FormControl fullWidth variant='outlined'>
             <InputLabel htmlFor='outlined-adornment-amount'>Input field</InputLabel>
             <OutlinedInput
@@ -66,13 +66,13 @@ export default function Index () {
           </FormControl>
         </StyledGrid>
         <Grid container xs={12} lg={6}>
-          <ListGrid item xs={6} lg={3}>
+          <ListGrid xs={6} lg={3}>
             <FormattedP>
               <h1>Input</h1>
               {inputText}
             </FormattedP>
           </ListGrid>
-          <ListGrid item xs={6} lg={3}>
+          <ListGrid xs={6} lg={3}>
             <FormattedP>
               <h1>Output</h1>
               {outputText}
