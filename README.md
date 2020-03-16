@@ -16,7 +16,8 @@ Each rover will be finished sequentially, which means that the second rover won'
 
 ### Example
 Test Input:
-```bash 5 5
+```bash 
+5 5
 1 2 N
 LMLMLMLMM
 3 3 E
@@ -24,7 +25,8 @@ MMRMMRMRRM
 ```
 
 Test output:
-```bash 1 3 N
+```bash 
+1 3 N
 5 1 E
 ```
 
